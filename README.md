@@ -18,7 +18,7 @@ Bedrock model agnostic MAP tagging is available. The official guidance is per [l
      aws iam list-user-tags --user-name MyBedrockUser
      ```
      if correctly tagged, the output should include:
-     ```txt
+```txt
 {
   "Tags": [
     {
@@ -27,7 +27,6 @@ Bedrock model agnostic MAP tagging is available. The official guidance is per [l
     }
   ]
 }
-
-     ```
+```
    - IAM User with attached IAM policies
    - IAM Role with attached IAM policies
