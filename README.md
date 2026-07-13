@@ -1,5 +1,5 @@
 # bedrock-map-tagging
-Bedrock model agnostic MAP tagging is available. The official guidance is per [link](https://docs.aws.amazon.com/MAP/latest/userguide/bedrock-map-tagging.html#bedrock-map-tagging-iam-principal)
+Bedrock model agnostic MAP tagging via **IAM principal** is available. The official guidance is per [link](https://docs.aws.amazon.com/MAP/latest/userguide/bedrock-map-tagging.html#bedrock-map-tagging-iam-principal)
 
 # operation process
 1. check with customer what specific ways are they using in terms of calling Bedrock models
@@ -68,7 +68,8 @@ Bedrock model agnostic MAP tagging is available. The official guidance is per [l
         ]
       }
       ```
+3. If there are resource tags, remove them so that IAM principle tags can be tracked as MAP spend.
 
-3. Activate the tag in Billing and Cost Management console referring this [link](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html)
+4. Activate the tag in Billing and Cost Management console referring this [link](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html)
 
-4. Involve TAM to create CUR dashboard to track tagging resource from AWS side.
+5. (Optional) Involve TAM to create CUR dashboard to track tagging resource from AWS side.
