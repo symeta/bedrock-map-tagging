@@ -9,7 +9,7 @@ Bedrock model agnostic MAP tagging is available. The official guidance is per [l
 
 2. Choose the corresponding ways of tagging according to customer's specific ways of calling bedrock models
    - Bedrock API Key
-     Find corresponding IAM user of the Bedrock API Key in IAM console, and tag this IAM user by
+     Find corresponding **IAM user of the Bedrock API Key in IAM console**, and tag this IAM user by
      ```sh
      aws iam tag-user --user-name MyBedrockUser --tags "Key=map-migrated,Value=migYOUR_MPE_ID"
      ```
