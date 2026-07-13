@@ -18,15 +18,56 @@ Bedrock model agnostic MAP tagging is available. The official guidance is per [l
      aws iam list-user-tags --user-name MyBedrockUser
      ```
      if correctly tagged, the output should include:
-```txt
-{
-  "Tags": [
-    {
-      "Key": "map-migrated",
-      "Value": "mig123456789"
-    }
-  ]
-}
-```
+      ```txt
+      {
+        "Tags": [
+          {
+            "Key": "map-migrated",
+            "Value": "mig123456789"
+          }
+        ]
+      }
+      ```
    - IAM User with attached IAM policies
+     Find corresponding IAM user in IAM console, and tag this IAM user by
+     ```sh
+     aws iam tag-user --user-name MyBedrockUser --tags "Key=map-migrated,Value=migYOUR_MPE_ID"
+     ```
+     and run the below cmd to check that the IAM user has been correctly tagged
+     ```sh
+     aws iam list-user-tags --user-name MyBedrockUser
+     ```
+     if correctly tagged, the output should include:
+      ```txt
+      {
+        "Tags": [
+          {
+            "Key": "map-migrated",
+            "Value": "mig123456789"
+          }
+        ]
+      }
+      ```     
    - IAM Role with attached IAM policies
+     Find corresponding IAM role in IAM console, and tag this IAM role by
+     ```sh
+     aws iam tag-role --role-name MyBedrockRole --tags "Key=map-migrated,Value=migYOUR_MPE_ID"
+     ```
+     and run the below cmd to check that the IAM role has been correctly tagged
+     ```sh
+     aws iam list-role-tags --role-name MyBedrockRole
+     ```
+     if correctly tagged, the output should include:
+      ```txt
+      {
+        "Tags": [
+          {
+            "Key": "map-migrated",
+            "Value": "mig123456789"
+          }
+        ]
+      }
+      ```
+
+3. Activate the tag in Billing and Cost Management console referring this [link](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html)
+
