@@ -71,3 +71,4 @@ Bedrock model agnostic MAP tagging is available. The official guidance is per [l
 
 3. Activate the tag in Billing and Cost Management console referring this [link](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html)
 
+4. Involve TAM to create CUR dashboard to track tagging resource from AWS side.
